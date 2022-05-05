@@ -18,4 +18,7 @@ export class SolicitudComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saludar(saludo:string): void {
+    alert(saludo)
+  }
 }

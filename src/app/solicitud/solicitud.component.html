@@ -1,3 +1,7 @@
 <p>Nombre: {{solicitud.nombre}} </p>
 
 <p [style.color]="+solicitud.valor > 0.5 ? 'red' : 'blue'">Valor: {{solicitud.valor}} </p>
+
+<div>
+  <button (click)="saludar('Hola mundo!!!')">Saluda</button>
+</div>
