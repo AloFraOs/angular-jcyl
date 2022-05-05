@@ -44,4 +44,7 @@ export class SolicitudComponent implements OnInit {
 
   /* Ejercicio 8 */
   solicitudes = [{nombre: 'Pedro', apellidos: 'Picapiedra'}, {nombre: 'Pablo', apellidos: 'Marmol'}];
+
+  /* Ejercicio 10 */
+  centro: {nombre:string, direccion:string} = {nombre:'Iñigo de Toro', direccion:'Valladolid'}
 }
