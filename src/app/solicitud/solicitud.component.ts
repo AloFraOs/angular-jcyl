@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolicitudComponent implements OnInit {
 
-  solicitud = {nombre: "Pedro Picapiedra"};
+  solicitud = {nombre: "Pedro Picapiedra", valor: ''};
 
-  constructor() { }
+  constructor() {
+    setInterval(() => {
+      this.solicitud.valor = '' + Math.random();
+      }, 2000)
+  }
 
   ngOnInit(): void {
   }
