@@ -2,6 +2,25 @@
 
 <p [style.color]="+solicitud.valor > 0.5 ? 'red' : 'blue'">Valor: {{solicitud.valor}} </p>
 
+<hr>
+
+<!-- Ejercicio 5 -->
 <div>
   <button (click)="saludar('Hola mundo!!!')">Saluda</button>
 </div>
+
+<!-- Ejercicio 6 -->
+<h1>Solicitud de comedor</h1>
+<h2>Nueva solicitud</h2>
+<div>
+  <label>Nombre: </label>
+  <input [value]="solicitud.nombre" (keyup)="actualizarNombre($event)" placeholder="Introduce tu nombre">
+</div>
+<div>
+  <label>Apellidos: </label>
+  <input [value]="solicitud.apellidos" (keyup)="actualizarApellidos($event)" placeholder="Introduce tus apellidos">
+</div>
+<div>
+  <button (click)="enviar()" [disabled]="validaFormu()">Enviar</button>
+</div>
+
