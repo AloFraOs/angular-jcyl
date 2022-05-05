@@ -1,3 +1,9 @@
+<style>
+  .aviso {
+    color: red;
+  }
+</style>
+
 <p>Nombre: {{solicitud.nombre}} </p>
 
 <p [style.color]="+solicitud.valor > 0.5 ? 'red' : 'blue'">Valor: {{solicitud.valor}} </p>
@@ -8,6 +14,8 @@
 <div>
   <button (click)="saludar('Hola mundo!!!')">Saluda</button>
 </div>
+
+<hr>
 
 <!-- Ejercicio 6 -->
 <h1>Solicitud de comedor</h1>
@@ -21,6 +29,8 @@
   <input [value]="solicitud.apellidos" (keyup)="actualizarApellidos($event)" placeholder="Introduce tus apellidos">
 </div>
 <div>
+  <!-- Ejercicio 7 -->
+  <p class="aviso" *ngIf="validaFormu()" >Los campos no pueden estar vacíos</p>
   <button (click)="enviar()" [disabled]="validaFormu()">Enviar</button>
 </div>
 
