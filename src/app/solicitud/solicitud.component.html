@@ -43,7 +43,7 @@
     <th>Nombre</th>
     <th>Apellidos</th>
   </tr>
-  <tr *ngFor="let solicitud of solicitudes">
+  <tr *ngFor="let solicitud of solicitudesOld">
     <td>{{solicitud.nombre}}</td>
     <td>{{solicitud.apellidos}}</td>
   </tr>
@@ -96,3 +96,17 @@
   </tr>
 </table>
 
+<hr>
+
+<!-- Ejercicio 14 -->
+<h1>Lista de solicitudes (usa servicio)</h1>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+  </tr>
+  <tr *ngFor="let solicitud of solicitudes">
+    <td>{{solicitud.nombre}}</td>
+    <td>{{solicitud.apellidos}}</td>
+  </tr>
+</table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SolicitudesService } from '../solicitudes.service';
 
 @Component({
   selector: 'app-solicitud',
@@ -9,11 +10,13 @@ export class SolicitudComponent implements OnInit {
 
   solicitud = {nombre:'', apellidos:'', valor: ''};
 
+  /*
   constructor() {
     setInterval(() => {
       this.solicitud.valor = '' + Math.random();
       }, 2000)
   }
+  */
 
   ngOnInit(): void {
   }
@@ -43,9 +46,9 @@ export class SolicitudComponent implements OnInit {
   }
 
   /* Ejercicio 8 */
-  solicitudes = [{nombre: 'Pedro', apellidos: 'Picapiedra', nacimiento: new Date()},
+  solicitudesOld = [{nombre: 'Pedro', apellidos: 'Picapiedra', nacimiento: new Date()},
                  {nombre: 'Pablo', apellidos: 'Marmol', nacimiento: new Date(1968, 6, 12)},
-                 {nombre: 'Wilma', apellidos: 'Picapiedra', nacimiento: new Date(1970, 2, 30)},
+                 {nombre: 'Wilma', apellidos: 'Picapiedra', nacimiento: new Date(1970, 2, 30)}
                 ];
 
   /* Ejercicio 10 */
@@ -55,4 +58,18 @@ export class SolicitudComponent implements OnInit {
   borrarSolicitud(solicitud: any) {
     this.solicitudes = this.solicitudes.filter(solicitudExistente => solicitudExistente.nombre != solicitud.nombre)
   }
+
+  /* Ejercicio 14 */
+  solicitudes;
+
+  constructor(private solicitudesService: SolicitudesService) {
+    /* Esto ya estaba en el constructor */
+    setInterval(() => {
+      this.solicitud.valor = '' + Math.random();
+      }, 2000)
+
+    /* Esto es lo nuevo */
+    this.solicitudes = solicitudesService.getSolicitudes();
+  }
+
 }
