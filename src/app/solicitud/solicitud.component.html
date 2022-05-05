@@ -76,3 +76,23 @@
     <td>{{solicitud.nacimiento  | date: 'dd/MM/yyyy'}}</td>
   </tr>
 </table>
+
+<hr>
+
+<!-- Ejercicio 13 -->
+<h1>Solicitudes (Borrar fila)</h1>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+    <th>Fecha Nacimiento</th>
+    <th>Acción</th>
+  </tr>
+  <tr *ngFor="let solicitud of solicitudes">
+    <td>{{solicitud.nombre}}</td>
+    <td>{{solicitud.apellidos}}</td>
+    <td>{{solicitud.nacimiento  | date: 'dd/MM/yyyy'}}</td>
+    <td><app-fila-solicitud [solicitud]="solicitud" (solicitudBorrada)="borrarSolicitud(solicitud)"></app-fila-solicitud></td>
+  </tr>
+</table>
+

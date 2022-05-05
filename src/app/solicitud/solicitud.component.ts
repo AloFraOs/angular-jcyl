@@ -44,8 +44,15 @@ export class SolicitudComponent implements OnInit {
 
   /* Ejercicio 8 */
   solicitudes = [{nombre: 'Pedro', apellidos: 'Picapiedra', nacimiento: new Date()},
-                 {nombre: 'Pablo', apellidos: 'Marmol', nacimiento: new Date(1968, 6, 12)}];
+                 {nombre: 'Pablo', apellidos: 'Marmol', nacimiento: new Date(1968, 6, 12)},
+                 {nombre: 'Wilma', apellidos: 'Picapiedra', nacimiento: new Date(1970, 2, 30)},
+                ];
 
   /* Ejercicio 10 */
   centro: {nombre:string, direccion:string} = {nombre:'Iñigo de Toro', direccion:'Valladolid'}
+
+  /* Ejercicio 13 */
+  borrarSolicitud(solicitud: any) {
+    this.solicitudes = this.solicitudes.filter(solicitudExistente => solicitudExistente.nombre != solicitud.nombre)
+  }
 }
