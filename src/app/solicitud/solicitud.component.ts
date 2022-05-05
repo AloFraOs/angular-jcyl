@@ -41,4 +41,7 @@ export class SolicitudComponent implements OnInit {
   enviar(): void {
     console.info(this.solicitud)
   }
+
+  /* Ejercicio 8 */
+  solicitudes = [{nombre: 'Pedro', apellidos: 'Picapiedra'}, {nombre: 'Pablo', apellidos: 'Marmol'}];
 }
