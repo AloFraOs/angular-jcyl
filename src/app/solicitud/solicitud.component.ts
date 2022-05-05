@@ -43,7 +43,8 @@ export class SolicitudComponent implements OnInit {
   }
 
   /* Ejercicio 8 */
-  solicitudes = [{nombre: 'Pedro', apellidos: 'Picapiedra'}, {nombre: 'Pablo', apellidos: 'Marmol'}];
+  solicitudes = [{nombre: 'Pedro', apellidos: 'Picapiedra', nacimiento: new Date()},
+                 {nombre: 'Pablo', apellidos: 'Marmol', nacimiento: new Date(1968, 6, 12)}];
 
   /* Ejercicio 10 */
   centro: {nombre:string, direccion:string} = {nombre:'Iñigo de Toro', direccion:'Valladolid'}

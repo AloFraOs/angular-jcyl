@@ -59,3 +59,20 @@
 <!-- Ejercicio 11 -->
 <h1>Selecciona centro</h1>
 <app-selector-centro></app-selector-centro>
+
+<hr>
+
+<!-- Ejercicio 12 -->
+<h1>Solicitudes</h1>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+    <th>Fecha Nacimiento</th>
+  </tr>
+  <tr *ngFor="let solicitud of solicitudes">
+    <td>{{solicitud.nombre}}</td>
+    <td>{{solicitud.apellidos}}</td>
+    <td>{{solicitud.nacimiento  | date: 'dd/MM/yyyy'}}</td>
+  </tr>
+</table>
