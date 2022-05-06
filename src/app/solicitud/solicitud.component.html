@@ -80,7 +80,7 @@
 <hr>
 
 <!-- Ejercicio 13 -->
-<h1>Solicitudes (Borrar fila)</h1>
+<h1>Solicitudes (borrar fila)</h1>
 <table>
   <tr>
     <th>Nombre</th>
@@ -100,6 +100,21 @@
 
 <!-- Ejercicio 14 -->
 <h1>Lista de solicitudes (usa servicio)</h1>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+  </tr>
+  <tr *ngFor="let solicitud of solicitudes">
+    <td>{{solicitud.nombre}}</td>
+    <td>{{solicitud.apellidos}}</td>
+  </tr>
+</table>
+
+<hr>
+
+<!-- Ejercicio 15 -->
+<h1>Lista de solicitudes (usa httpClient)</h1>
 <table>
   <tr>
     <th>Nombre</th>

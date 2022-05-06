@@ -54,22 +54,34 @@ export class SolicitudComponent implements OnInit {
   /* Ejercicio 10 */
   centro: {nombre:string, direccion:string} = {nombre:'Iñigo de Toro', direccion:'Valladolid'}
 
-  /* Ejercicio 13 */
+  /* Ejercicio 13
   borrarSolicitud(solicitud: any) {
     this.solicitudes = this.solicitudes.filter(solicitudExistente => solicitudExistente.nombre != solicitud.nombre)
   }
+  */
 
-  /* Ejercicio 14 */
+  /* Ejercicio 14
   solicitudes;
-
   constructor(private solicitudesService: SolicitudesService) {
-    /* Esto ya estaba en el constructor */
+
     setInterval(() => {
       this.solicitud.valor = '' + Math.random();
       }, 2000)
 
-    /* Esto es lo nuevo */
     this.solicitudes = solicitudesService.getSolicitudes();
+  }
+  */
+
+  /* Ejercicio 15 */
+  solicitudes: any;
+  constructor(private solicitudesService: SolicitudesService) {
+    this.solicitudes = solicitudesService.getSolicitudes();
+    solicitudesService.getSolicitudes().then(
+    x => this.solicitudes = x)
+  }
+
+  borrarSolicitud(solicitud: any) {
+    this.solicitudes = this.solicitudes.filter((solicitudExistente: any) => solicitudExistente.nombre != solicitud.nombre)
   }
 
 }
