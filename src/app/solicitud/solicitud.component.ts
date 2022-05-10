@@ -72,7 +72,7 @@ export class SolicitudComponent implements OnInit {
   }
   */
 
-  /* Ejercicio 15 */
+  /* Ejercicio 15  */
   solicitudes: any;
   constructor(private solicitudesService: SolicitudesService) {
     this.solicitudes = solicitudesService.getSolicitudes();
